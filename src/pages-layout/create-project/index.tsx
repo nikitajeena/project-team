@@ -37,7 +37,7 @@ const CreateProject = (props) => {
     toPreviousPage,
   } = useProjectForm(initialFormState);
 
-  const addProject = async (event) => {
+  const addProject =  (event) => {
     event.preventDefault();
     setLoading(true);
 

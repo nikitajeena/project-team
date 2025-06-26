@@ -13,6 +13,7 @@ const FormWrapper: React.FC<FormWrapperProps> = ({
   onSubmitHandler,
   children,
 }) => {
+
   const formStyle = {
     width: size,
     minHeight: size,
@@ -33,3 +34,4 @@ const FormWrapper: React.FC<FormWrapperProps> = ({
 };
 
 export default FormWrapper;
+

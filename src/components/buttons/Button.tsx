@@ -22,7 +22,6 @@ const Button = ({
   gutter,
 }: ButtonProps) => {
   let buttonStyle: CSSProperties = {};
-
   switch (buttonType) {
     case button.PILL:
       buttonStyle = {
@@ -70,4 +69,4 @@ const Button = ({
   );
 };
 
-export default Button;
+export default React.memo(Button);

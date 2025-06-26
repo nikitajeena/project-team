@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useCallback, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { loadProjects } from "../../store/project/projectActionCreator";
 import { useSelector } from "react-redux";
@@ -30,9 +30,9 @@ function Home() {
       </div>
     );
   }
-  function toCreateProject() {
+  const toCreateProject = useCallback(() => {
     navigate("/add-project")
-  }
+  },[]) 
   return (
     <main className={mainClasses}>
       {projectList}

@@ -5,7 +5,7 @@ import classes from "./login.module.scss";
 import Button from "../../components/buttons/Button";
 import { button } from "../../constants/constants";
 import { useDispatch, useSelector } from "react-redux";
-import { useLogin } from "../../store/auth/authActionCreator";
+import { userLogin } from "../../store/auth/authActionCreator";
 import { useNavigate } from "react-router-dom";
 import { AppDispatch, RootState } from "../../store/store";
 
@@ -30,7 +30,7 @@ const Login = () => {
   };
 
   function login(username, password) {
-    dispatch(useLogin(username, password))
+    dispatch(userLogin(username, password))
     
   }
   const handlePasswordChange = ({ target }) => {
@@ -42,7 +42,6 @@ const Login = () => {
       }));
   };
 
-  console.log(isAuthenticated, "isAuthenticated")
 
   const validateCredentials = (event) => {
     event.preventDefault();

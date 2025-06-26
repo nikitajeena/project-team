@@ -1,7 +1,7 @@
 import fetchWrapper from "../../api";
 import { SET_USER_DETAILS } from "./authActions";
 
-export const useLogin = (username, password) => {
+export const userLogin = (username, password) => {
   return async (dispatch, getState) => {
     const result: any = await fetchWrapper("/auth/login", {
       method: "POST",
