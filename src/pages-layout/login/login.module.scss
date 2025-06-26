@@ -1,0 +1,29 @@
+@import "../../styles/variables.scss";
+@import "../../styles/_method.scss";
+
+.error-message {
+  color: red;
+}
+.login-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+.login-left-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    // display: inline-block;
+    object-fit: contain;
+    max-width: 100%;
+  }
+}
+.login-right-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

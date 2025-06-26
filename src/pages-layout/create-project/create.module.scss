@@ -1,0 +1,23 @@
+@import "../../styles/variables.scss";
+@import "../../styles/_method.scss";
+
+.create-project-main {
+  @include flexBox(center, center, row);
+
+  .create-project-form-container {
+    @include flexBox(center, center, row);
+    min-height: 75%;
+    padding-top: 1rem;
+    gap: 3rem;
+    border: 1px solid rgb(232, 230, 230);
+    border-radius: 20px;
+    box-shadow: 0px 2px 2px $box-shadow-color;
+    width: 50rem;
+    padding: 2rem;
+
+    .project-logo-input {
+      padding: 1rem;
+      align-self: center;
+    }
+  }
+}

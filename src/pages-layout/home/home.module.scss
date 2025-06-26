@@ -1,0 +1,39 @@
+.no-projects-main{
+      height: calc(100vh - 3rem);
+ display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;    
+
+  div{
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  div>span:nth-child(1){
+    color: rgb(209, 50, 35);
+    font-size: 2rem;
+    text-transform: uppercase;
+          letter-spacing: 1px;
+
+
+  }
+  span:last-child {
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+}
+
+.add-project-button {
+  margin: 2rem;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: rotate(180deg);
+  }
+}

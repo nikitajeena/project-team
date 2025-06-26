@@ -1,0 +1,33 @@
+.modal-overlay {
+  background-color: #fcfcfc54;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+}
+
+.modal-container {
+  height: 50%;
+  width: 50%;
+  margin: auto;
+  position: absolute;
+  padding: auto;
+  top: 25%;
+  left: 20%;
+  border-radius: 2rem;
+  background-color: #f7cef7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.align-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.button-container {
+  display: flex;
+  gap: 2rem;
+  margin: 1rem 0rem;
+}

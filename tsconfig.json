@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+     "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "jsx": "react-jsx"
+  },
+  "include": [
+    "src",          
+    "global.d.ts"  
+  ]
+}
