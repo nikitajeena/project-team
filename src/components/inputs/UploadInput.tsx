@@ -1,4 +1,4 @@
-import  { useRef } from "react";
+import  { JSX, useRef } from "react";
 import classes from "./uploadInput.module.scss";
 
 const ImageInput = (props) => {
@@ -7,7 +7,7 @@ const ImageInput = (props) => {
     height: props.size || "275px",
   };
 
-  const fileInputRef = useRef<any>(null);
+  const fileInputRef = useRef<HTMLInputElement | null>(null);
 
   const uploadImage = () => {
     fileInputRef.current.click();
@@ -23,7 +23,7 @@ const ImageInput = (props) => {
     fileReaderPromise.then((result) => props.onChangeHandler(result));
   };
 
-  let image: any = null;
+  let image: JSX.Element | null = null;
   if (props.image) {
     image = (
       <img

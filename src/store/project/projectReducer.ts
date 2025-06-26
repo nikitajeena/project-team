@@ -1,6 +1,8 @@
+import { ProjectState } from "../../utilities/type.js";
 import * as projectActions from "./projectActions.js";
 
-const initialProjects: any = {
+
+const initialProjects: ProjectState = {
   projects: [],
   initialProjectsFetched: false,
 };

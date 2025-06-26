@@ -5,9 +5,10 @@ import { useSelector } from "react-redux";
 import { List } from "../../components/list/List";
 import classes from "./home.module.scss";
 import Button from "../../components/buttons/Button";
+import { RootState } from "../../store/store";
 function Home() {
   const navigate = useNavigate()
-  const projects = useSelector((state: any) => {
+  const projects = useSelector((state: RootState) => {
     return state.project;
   });
   useEffect(() => {

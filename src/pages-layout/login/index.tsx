@@ -7,11 +7,12 @@ import { button } from "../../constants/constants";
 import { useDispatch, useSelector } from "react-redux";
 import { useLogin } from "../../store/auth/authActionCreator";
 import { useNavigate } from "react-router-dom";
+import { AppDispatch, RootState } from "../../store/store";
 
 const Login = () => {
-  const dispatch: any = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
     const navigate = useNavigate();
-  const {isAuthenticated, error} = useSelector((state: any) => state.auth);
+  const {isAuthenticated, error} = useSelector((state: RootState) => state.auth);
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");

@@ -8,10 +8,11 @@ import FormWrapper from "../../components/form/Form";
 import TextInput from "../../components/inputs/TextInput";
 import { button } from "../../constants/constants";
 import { updateProject } from "../../store/project/projectActionCreator";
+import { AppDispatch, RootState } from "../../store/store";
 const EditProject = () => {
-  const dispatch: any = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
   const navigate = useNavigate();
-  const projectInformation = useSelector((state: any) => state);
+  const projectInformation = useSelector((state: RootState) => state);
   const params = useParams();
   const project = projectInformation.project.projects.find((project) => {
     return project.id == params.projectId;

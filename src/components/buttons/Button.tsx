@@ -1,13 +1,14 @@
 import { CSSProperties } from "react";
 import { button } from "../../constants/constants";
 import classes from "./button.module.scss";
+import * as React from "react";
 interface ButtonProps {
   buttonType?: string;
   style?: CSSProperties | any;
-  type?: any;
+  type?: "button" | "submit" | "reset";
   disabled?: boolean;
   onClickHandler?: () => void;
-  label?: any;
+  label?: React.ReactNode | string;
   gutter?: string;
 }
 

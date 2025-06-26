@@ -9,9 +9,10 @@ import { createProject } from "../../store/project/projectActionCreator";
 import { button } from "../../constants/constants";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
+import { AppDispatch, RootState } from "../../store/store";
 const CreateProject = (props) => {
-  const data = useSelector((state: any) => state.project);
-  const dispatch: any = useDispatch();
+  const data = useSelector((state: RootState) => state.project);
+  const dispatch = useDispatch <AppDispatch>();
   const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();

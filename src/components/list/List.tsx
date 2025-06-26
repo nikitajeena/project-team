@@ -6,8 +6,9 @@ import classes from "./list.module.scss";
 import ConfirmationModal from "../confirmation-modal/confirmationModal";
 import { useDispatch } from "react-redux";
 import { deleteProject } from "../../store/project/projectActionCreator";
+import { AppDispatch } from "../../store/store";
 export const List = (props) => {
-  const dispatch: any = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
   const navigate = useNavigate();
   const [showDeleteConfirmationModal, setShowDeleteConfirmationModal] =
     useState(false);
