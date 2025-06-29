@@ -27,6 +27,9 @@ export const List = (props) => {
     const deletionWasSuccess = true;
     if (deletionWasSuccess) toggleDeleteConfirmationModal(false);
   };
+  
+
+  const tableHeader = ["Name","Manager","Members","Actions"]
   const deleteButtonLabel = (
     <span>
       <i className="fa fa-trash-o"></i> delete
@@ -85,18 +88,13 @@ export const List = (props) => {
           <div className={classes["logo"]}>
             <span>Logo</span>
           </div>
-          <div>
-            <span>Name</span>
+          {
+            tableHeader.map((header) => <> 
+            <div>
+            <span>{header}</span>
           </div>
-          <div>
-            <span></span>Manager
-          </div>
-          <div>
-            <span>Members</span>
-          </div>
-          <div>
-            <span>Actions</span>
-          </div>
+            </>)
+          }
         </li>
         {items}
       </ul>
